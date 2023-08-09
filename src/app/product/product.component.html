@@ -1,0 +1,41 @@
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Ürün Yönetimi</h5>
+        </div>
+        <div class="card-body all-icons">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Resim</th>
+                <th>Ürün adı</th>
+                <th>Fiyat</th>
+                <th>Durum</th>
+                <th>Detay</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let p of productmodel">
+                <td><img [src]= "p.url "  class="rounded float-start" width="100px" height="100px"/></td>
+                <td>{{ p.productName }}</td>
+                <td>{{ p.price }}</td>
+                <td>{{ p.status }}</td>
+                <td>
+                  <button
+                    routerLink="/product-detail/{{ p.id }}"
+                    class="btn btn-primary"
+                  >
+                    Detay
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

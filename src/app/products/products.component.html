@@ -1,0 +1,38 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Ürün Yönetimi</h5>
+        </div>
+        <div class="card-body all-icons">
+          
+<button routerLink="product-add" class="btn btn-primary">Yeni ürün ekle</button>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Ürün adı</th>
+      <th>Fiyat</th>
+      <th>   </th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let p of products">
+    <td>{{ p.id }}</td>
+    <td>{{ p.productName }}</td>
+    <td>{{ p.price }}</td>
+    <td>
+    
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

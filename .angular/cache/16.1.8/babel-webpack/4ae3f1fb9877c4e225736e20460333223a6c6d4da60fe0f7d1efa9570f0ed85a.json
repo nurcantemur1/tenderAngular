@@ -1,0 +1,1 @@
+{"ast":null,"code":"export let Statics = /*#__PURE__*/(() => {\n  class Statics {}\n  Statics.ApiUrl = \"https://localhost:44397/api/\";\n  return Statics;\n})();","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

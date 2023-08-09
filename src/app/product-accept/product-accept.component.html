@@ -1,0 +1,50 @@
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Onay bekleyen ürünler</h5>
+        </div>
+        <div class="card-body all-icons">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Resim</th>
+                <th>Ürün adı</th>
+                <th>Fiyat</th>
+                <th>Onay</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let p of productmodel">
+                <td>
+                  <img
+                    [src]="p.url"
+                    class="rounded float-start"
+                    width="100px"
+                    height="100px"
+                  />
+                </td>
+                <td>{{ p.productName }}</td>
+                <td>{{ p.price }}</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    [checked]="p.status"
+                    (change)="ischecked(p.id)"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="card-footer row justify-content-end">
+            <div class="col-2">
+              <button class="btn btn-primary" (click)="kaydet()">Onayla</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
